@@ -1,5 +1,5 @@
 import './App.css'
-import Header from './components/header/navbar'
+import Navbar from './components/header/navbar'
 
 
 
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className='container'>
-      <Header />  
+      <Navbar />  
     </div>
   )
 }

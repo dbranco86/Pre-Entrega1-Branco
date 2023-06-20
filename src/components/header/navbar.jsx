@@ -1,8 +1,8 @@
 import React from "react"; 
-import Cart from './cart';
 import './styles.css';
+import ItemListContainer from "./itemlistcontainer";
 
-const Header = () => {
+const Navbar = () => {
     return (
         <header className="header">
             <input type="checkbox" className="side-menu" id="side-menu" />
@@ -15,19 +15,10 @@ const Header = () => {
                 </a>
             </div>
             <nav className="nav">
-                <ul className="menu">
-                    <li><a href="#">Quienes somos</a></li>
-                    <li><a href="#">Nuestros Productos</a></li>
-                </ul>
-                <ul className="menu">
-                    <li><a href="#">Iniciar Sesión</a></li>
-                    <li class="nav-item">
-                    <Cart />
-                    </li>   
-                </ul>
+                <ItemListContainer />
             </nav>
         </header>
     )
 }
 
-export default Header;
+export default Navbar;
