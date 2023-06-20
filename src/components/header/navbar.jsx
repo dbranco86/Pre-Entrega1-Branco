@@ -1,6 +1,6 @@
 import React from "react"; 
 import './styles.css';
-import ItemListContainer from "./itemlistcontainer";
+import Cart from "./cart";
 
 const Navbar = () => {
     return (
@@ -15,7 +15,16 @@ const Navbar = () => {
                 </a>
             </div>
             <nav className="nav">
-                <ItemListContainer />
+            <ul className="menu">
+                <li><a href="#">Quienes somos</a></li>
+                <li><a href="#">Nuestros Productos</a></li>
+            </ul>
+            <ul className="menu">
+                <li><a href="#">Iniciar Sesión</a></li>
+                <li class="nav-item">
+                    <Cart />
+                </li>   
+            </ul>
             </nav>
         </header>
     )
