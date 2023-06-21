@@ -115,6 +115,7 @@
 .title h1{
     font-size: 2rem;
     font-weight: bold;
+    font-family: none;
 }
 @media(min-width: 768px){
     .logo{
@@ -186,5 +187,6 @@
     .title h1{
         font-size: 3rem;
         font-weight: bold;
+        font-family: none;
     }
 }
