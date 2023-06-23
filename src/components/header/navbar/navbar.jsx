@@ -1,6 +1,6 @@
 import React from "react"; 
 import './styles.css';
-import Cart from "./cart";
+import Cart from "../cart/cart";
 
 const Navbar = () => {
     return (
@@ -11,7 +11,7 @@ const Navbar = () => {
             </label>
             <div className="logo">
                 <a href="#" className="logo">
-                    <img className="image-logo" src="../src/images/logo.png" alt=""/>
+                    <img className="image-logo" src="../src/assets/logo.png" alt=""/>
                 </a>
             </div>
             <nav className="nav">
