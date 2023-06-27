@@ -12,29 +12,16 @@
     margin-left: 10px;
 }
 .num{
-    background-color: #AA9D8C;
+    /*background-color: #AA9D8C;*/
+    background: linear-gradient(to right, hsl(105, 50%, 45%), hsl(62, 80%, 60%), hsl(322, 90%, 40%));
     border-radius: 50%;
     bottom: 5px;
-    color: #fff;
+    /*color: #fff;*/
+    color: #000;
     font-size: 1rem;
     padding: 0 0.4rem;
     position: relative;
     right: -3px;
     text-align: center;
     transform-origin: center;
-}
-@media(min-width: 768px){
-    .cart-btn {
-        display: flex; 
-        padding: 15px;
-        transition: all 0.3s ease-in-out;
-        width: 60px;
-        background-color: transparent;
-        border-color: transparent;
-        margin-right: 20px;
-    }
-    .cart{
-        width: 100%;
-        margin-left: 0px;
-    }
 }
