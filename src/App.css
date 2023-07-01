@@ -2,6 +2,7 @@
 *{
   padding: 0;
   margin: 0;
+  height: 100%;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
@@ -17,12 +18,26 @@ a{
 ul{
   list-style: none;
 }
-.container{
+.main-container{
   display: flex;
+  flex-direction: column;
 }
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
 }
+.covers-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+
+

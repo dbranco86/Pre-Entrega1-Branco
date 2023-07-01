@@ -1,8 +1,18 @@
 import React from "react"; 
 import './styles.css';
-import Cart from "../cart/cart";
+import Cart from "../cart/index";
 
 const Navbar = () => {
+    document.addEventListener('scroll', function() {
+        var header = document.querySelector('.header');
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition > 0) {
+            header.classList.add('header-colored');
+        } else {
+            header.classList.remove('header-colored');
+        }
+    });
     return (
         <header className="header">
             <input type="checkbox" className="side-menu" id="side-menu" />

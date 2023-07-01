@@ -5,9 +5,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     margin: 0.5rem;
     padding: 1rem;
     max-width: 400px;
+    height: 500px;
+    transition: all 0.3s ease-in-out;
+}
+.card:hover {
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    scale: 1.05;
+    cursor: pointer;
 }
 .cardImage {
     width: 200px;
@@ -50,13 +58,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    align-items: end;
     padding: 1rem;
+    position: absolute;
+    bottom: 0;
+
 }
 
 .cardActions button {
     border: none;
     background-color: #000;
     color: #ffffff;
-    padding: 1rem 2rem;
+    padding: 1rem;
     border-radius: 0.2rem;
+    height: auto;
 }
