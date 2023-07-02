@@ -21,6 +21,7 @@ ul{
 .main-container{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .cardContainer {
   display: flex;
@@ -30,7 +31,7 @@ ul{
   justify-content: center;
   gap: 0.2rem;
 }
-.covers-container{
+.coversContainer{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -39,5 +40,23 @@ ul{
   position: relative;
   top: 0;
 }
-
-
+.imagesContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  justify-content: center;
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.imagesCard{
+  margin: 3px;
+  height: auto;
+}
+.inputContanier{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
