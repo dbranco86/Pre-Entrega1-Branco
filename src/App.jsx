@@ -78,57 +78,57 @@ function App() {
       <div className='coversContainer'>
         <Covers /> 
       </div>
-      <div className='imagesContainer'>
-        <div className='imagesCard'>  
-          <ProductClass image="./src/assets/dresses.png" name="dresses"/>
-        </div> 
-        <div className='imagesCard'>
-          <ProductClass image="./src/assets/jeans.png" name="jeans"/>
-        </div>  
-        <div className='imagesCard'>
-          <ProductClass image="./src/assets/shirts.png" name="shirts"/>
-        </div>  
-        <div className='imagesCard'>
-          <ProductClass image="./src/assets/skirts.png" name="skirts"/>
-        </div> 
-      </div>
-      <div className='inputContainer'>
-        <Input 
-          placeholder='busca un producto'
-          id='task'
-          required={true}
-          name='Search'
-          onChange={onChange}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          active={active}
-        />
-      </div>  
+        
       {showDetails ? (
           <>
             <div className='headerDetailContainer'>
               <button onClick={() => setShowDetails(false)} className='backButton'> &#8592; Regresar</button>
-              <h2 className='headerTitleCard'>Detalle del Producto</h2>
+              <Details {...productDetail} />
             </div>
-            <Details {...productDetail} />
           </>
         ) : (
           <>
+            <div className='inputContainer'>
+              <Input 
+                placeholder='busca un producto'
+                id='task'
+                required={true}
+                name='Search'
+                onChange={onChange}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                active={active}
+              />
+            </div>
+            <div className='imagesContainer'>
+              <div className='imagesCard'>  
+                <ProductClass image="./src/assets/dresses.png" name="dresses"/>
+              </div> 
+              <div className='imagesCard'>
+                <ProductClass image="./src/assets/jeans.png" name="jeans"/>
+              </div>  
+              <div className='imagesCard'>
+                <ProductClass image="./src/assets/shirts.png" name="shirts"/>
+              </div>  
+              <div className='imagesCard'>
+                <ProductClass image="./src/assets/skirts.png" name="skirts"/>
+              </div> 
+            </div>
             <ItemListContainer text="¡Bienvenido a Moda Perucha!" />
-          <div className='cardContainer'>
-          {
-            search.length > 0 ? (
-              productFiltered.map((product) => (
-              <Card {...product} onShowDetails={onShowDetails} />
+            <div className='cardContainer'>
+            {
+              search.length > 0 ? (
+                productFiltered.map((product) => (
+                <Card {...product} onShowDetails={onShowDetails} />
+                ))
+              ) : (
+              products.map((product) => (
+                <Card {...product} onShowDetails={onShowDetails}/>
               ))
-            ) : (
-            products.map((product) => (
-              <Card {...product} onShowDetails={onShowDetails}/>
-            ))
-            )
-          }
-        </div>
-        </>
+              )
+            }
+            </div>
+          </>
         )
       }       
     </div>

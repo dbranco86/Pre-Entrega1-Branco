@@ -4,11 +4,11 @@
   margin: 0;
   height: 100%;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body{
-  background-color: #F2EDE3;
+  background-color: #fff;
 }
 
 a{
@@ -21,7 +21,6 @@ ul{
 .main-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .cardContainer {
   display: flex;
@@ -48,15 +47,16 @@ ul{
   width: 100%;
   padding-left: 70px;
   padding-right: 70px;
-  padding-top: 100px;
+  padding-top: 50px;
   padding-bottom: 100px;
 }
 .imagesCard{
   margin: 3px;
   height: auto;
 }
-.inputContanier{
+.inputContainer{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  margin-right: auto;
+  padding-top: 5px;
 }

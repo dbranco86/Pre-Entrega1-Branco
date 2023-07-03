@@ -1,72 +1,75 @@
-.cardDetail {
-    background-color: #ffffff;
-    border-radius: 0.3rem;
-    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+.cardDetail{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    margin: 0.5rem;
-    padding: 1rem;
-    height: 500px;
-    transition: all 0.3s ease-in-out;
+    height: auto;
 }
 
 .cardDetailImage {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 0.7rem;
+    width: 100%;
+    height: auto;
 }
+
 .cardDetailContent {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    min-height: 400px;
+    justify-content: center;
+    padding: 2rem;
+    height: auto;
+    background-color: #fff;
 }
+/**/
 .cardDetailName {
     font-size: 2rem;
-    padding: 0.3rem 0;
+    height: 70px;
 }
 .cardDetailCategory {
     font-size: 1.2rem;
-    color: #5156A4;
+    color: #000;
     font-weight: bold;
-    padding: 0.3rem 0;
+    height: auto;
 }
 .cardDetailDescription {
     font-size: 1rem;
     padding: 0.3rem 0;
     min-height: 4rem;
     text-align: center;
+    height: 150px;
 }
 .cardDetailPrice {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #5156A4;
+    color: #000;
     padding: 0.3rem 0;
+    height: auto;
 }
 .cardDetailStock {
     font-size: 1rem;
     padding: 0.3rem 0;
+    height: auto;
 }
 .cardDetailActions {
     display: flex;
-    padding: 1rem 0rem;
+    width: 100%;
+    padding-top: 10px;
+    height: auto;
 }
 
 .cardDetailActions button {
-    border: none;
-    background-color: #5156A4;
-    color: #ffffff;
+    background-color: #fff;
+    color: #000;
     padding: 1rem 2rem;
     font-size: 1rem;
-    border-radius: 0.2rem;
+    border-color: #000;
+    border: solid 1px #000;
+    height: fit-content;
+    width: 200px;
 }
 
 .headerDetailContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 0.5rem;
 }
 
@@ -80,6 +83,105 @@
 }
 
 .headerDetailContainer .backButton:hover{
-    border-bottom: 1px solid #5156A4;
+    border-bottom: 1px solid #000;
     scale: 1.02;
+}
+.headerTitleCard{
+    padding-left: 1rem;
+}
+.headerDetailContainer .backButton {
+    margin-right: auto;
+    padding-bottom: 5px;
+}
+@media(min-width: 768px){
+    .cardDetail {
+        background-color: #ffffff;
+        box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0.5rem;
+        padding: 1rem;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .cardDetailImage {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+    }
+    .cardDetailContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        min-height: 400px;
+        padding-left: 2rem;
+    }
+    .cardDetailName {
+        font-size: 2rem;
+        padding: 0.3rem 0;
+    }
+    .cardDetailCategory {
+        font-size: 1.2rem;
+        color: #000;
+        font-weight: bold;
+        padding: 0.3rem 0;
+    }
+    .cardDetailDescription {
+        font-size: 1rem;
+        padding: 0.3rem 0;
+        min-height: 4rem;
+        text-align: center;
+        height: auto;
+    }
+    .cardDetailPrice {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #000;
+        padding: 0.3rem 0;
+    }
+    .cardDetailStock {
+        font-size: 1rem;
+        padding: 0.3rem 0;
+    }
+    .cardDetailActions {
+        display: flex;
+        width: 100%;
+        padding-top: 5px;
+    }
+    
+    .cardDetailActions button {
+        background-color: #fff;
+        color: #000;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        border-color: #000;
+        border: solid 1px #000;
+    }
+    
+    .headerDetailContainer {
+        display: flex;
+        flex-direction: row;
+        padding: 0.5rem;
+    }
+    
+    .headerDetailContainer .backButton {
+        border: none;
+        background-color: transparent;
+        font-size: 1rem;
+        padding: 0;
+        margin: 0;
+        transition: all 0.1s ease-in-out;
+    }
+    
+    .headerDetailContainer .backButton:hover{
+        border-bottom: 1px solid #000;
+        scale: 1.02;
+    }    
+    .cardDetailImageContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 }

@@ -1,15 +1,14 @@
 .counterContainer {
     display: flex;
     justify-content: center;
-    border: solid 0.5px #000;
-    border-radius: 3px;
-    width: 8rem;
+    border: 1px solid #bbb;
+    width: 100px;
+    padding: 5px;
     height: auto;
 }
 .buttonContainer {
     display: flex;
     justify-content: center;
-    align-items: center; 
     width: 5rem;
     height: 2rem;
 }
@@ -20,11 +19,13 @@
     width: 2rem;
     height: 2rem; 
     border: none;
-    background-color: #ccc; 
-    color: #fff; 
+    color: #000; 
     font-weight: bold; 
     cursor: pointer; 
 }
 .counterButton:hover {
     background-color: #aaa; /* Cambia el color de fondo al pasar el mouse */
+}
+.counterText{
+    font-size: 1.5rem;
 }

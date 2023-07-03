@@ -26,9 +26,7 @@ const Details = ({ id, image, name, category, description, price, stock, onAddTo
                 <p className='cardDetailDescription'>{description}</p>
                 <p className='cardDetailPrice'>USD {price}</p>
                 <p className='cardDetailStock'>{stock} left</p>
-                <div className='counterContainer'>
-                    <Counter isValidCounter={isValidCounter}  counter={counter} onDecrementCounter={decrementCounter} onIncrementCounter={incrementCounter} />  
-                </div>
+                <Counter isValidCounter={isValidCounter}  counter={counter} onDecrementCounter={decrementCounter} onIncrementCounter={incrementCounter} />  
                 <div className='cardDetailActions'>
                     <button onClick={() => onAddToCart(id)} className='cardButton'>Add to cart</button>
                 </div>
