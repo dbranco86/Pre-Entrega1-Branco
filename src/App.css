@@ -29,6 +29,8 @@ ul{
   align-items: center;
   justify-content: center;
   gap: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .coversContainer{
   display: flex;
@@ -48,7 +50,8 @@ ul{
   padding-left: 70px;
   padding-right: 70px;
   padding-top: 50px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  height: auto;
 }
 .imagesCard{
   margin: 3px;

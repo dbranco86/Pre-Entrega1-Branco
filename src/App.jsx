@@ -7,18 +7,20 @@ import Input from './components/main/search/index';
 import Card from './components/main/products/card/index';
 import Details from './components/main/products/details/index';
 import ProductClass from './components/main/products/product-class/index';
-
+import { useFetch } from './hooks/useFetch';
+import { API_URLS } from '../src/constants/index'
+import Loader from './components/main/loader';
 
 
 
 function App() {
-
   const [search, setSearch] = useState('');
   const [active, setActive] = useState(false);
-  const [products, setProducts] = useState([]);
   const [showDetails, setShowDetails] = useState(false);
   const [productDetail, setProductDetail] = useState(null);
   const [productFiltered, setProductFiltered] = useState([]);
+
+  const { data: products, loading, error  } = useFetch(API_URLS.PRODUCTS.url, API_URLS.PRODUCTS.config);
 
   const filterBySearch = (query) => {
     let updateProductList = [...products];
@@ -50,29 +52,7 @@ function App() {
     setProductDetail(findProduct);
   }
   
-  useEffect(() => {
-    const getProduct = async () => {
-      try {
-        const response = await fetch('https://6499986179fbe9bcf83f91b6.mockapi.io/products', {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
-
-        const data = await response.json();
-
-        setProducts(data);
-      } catch (error) {
-        console.error(error);
-      }
-    }
-    getProduct();
-  }, [])
-
-  console.log({ products });
-  return (
-    
+  return (  
     <div className='main-container'>
       <Navbar /> 
       <div className='coversContainer'>
@@ -100,6 +80,7 @@ function App() {
                 active={active}
               />
             </div>
+            <ItemListContainer text="¡Bienvenido a Moda Perucha!" />
             <div className='imagesContainer'>
               <div className='imagesCard'>  
                 <ProductClass image="./src/assets/dresses.png" name="dresses"/>
@@ -114,19 +95,21 @@ function App() {
                 <ProductClass image="./src/assets/skirts.png" name="skirts"/>
               </div> 
             </div>
-            <ItemListContainer text="¡Bienvenido a Moda Perucha!" />
             <div className='cardContainer'>
-            {
-              search.length > 0 ? (
-                productFiltered.map((product) => (
-                <Card {...product} onShowDetails={onShowDetails} />
+              {loading && <Loader />}
+              {error && <h2>{error}</h2>}
+              { search.length > 0 && productFiltered.length === 0 && <h2>Product not found</h2>}
+              {
+                search.length > 0 ? (
+                  productFiltered.map((product) => (
+                    <Card key={product.id} {...product} onShowDetails={onShowDetails} />
+                  ))
+                ) : (
+                products.map((product) => (
+                  <Card key={product.id} {...product} onShowDetails={onShowDetails} />
                 ))
-              ) : (
-              products.map((product) => (
-                <Card {...product} onShowDetails={onShowDetails}/>
-              ))
-              )
-            }
+                )
+              }
             </div>
           </>
         )
