@@ -1,6 +1,6 @@
 import React from "react"; 
-import './styles.css';
 import Cart from "../cart/index";
+import './styles.css';
 
 const Navbar = () => {
     document.addEventListener('scroll', function() {

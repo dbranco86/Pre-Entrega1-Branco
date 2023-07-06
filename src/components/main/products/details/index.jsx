@@ -1,6 +1,7 @@
-import './styles.css'
-import Counter from "../../counter/index"
 import { useState } from 'react'
+import Counter from "../../counter/index"
+import './styles.css'
+
 
 const Details = ({ id, image, name, category, description, price, stock, onAddToCart }) => {
     const [counter, setCounter] = useState(0);
