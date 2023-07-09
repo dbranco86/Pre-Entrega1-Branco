@@ -69,7 +69,6 @@ function Home() {
                     active={active}
                 />
             </div>
-            <ItemListContainer text="¡Bienvenido a Moda Perucha!" />
             <div className='imagesContainer'>
                 <div className='imagesCard'>  
                     <ProductClass image="./src/assets/dresses.png" name="dresses"/>

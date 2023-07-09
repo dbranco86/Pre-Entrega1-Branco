@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-  
+
 body{
     background-color: #fff;
 }
@@ -21,6 +21,7 @@ ul{
 .main-container{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .cardContainer {
     display: flex;

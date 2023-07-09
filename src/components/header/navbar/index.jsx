@@ -4,6 +4,7 @@ import './styles.css';
 
 const Navbar = () => {
     document.addEventListener('scroll', function() {
+        if (window.location.pathname === '/') {
         var header = document.querySelector('.header');
         var scrollPosition = window.scrollY;
 
@@ -12,6 +13,7 @@ const Navbar = () => {
         } else {
             header.classList.remove('header-colored');
         }
+    }
     });
     return (
         <header className="header">
