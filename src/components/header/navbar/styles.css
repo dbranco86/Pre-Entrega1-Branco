@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: auto;
+    height: 80px;
     z-index: 9999;
 }
 .header-colored{
@@ -11,7 +11,7 @@
 .hamb{
     cursor: pointer;
     float: right;
-    padding: 30px 30px;
+    padding: 40px 30px;
     position: sticky;
     z-index: 999;
 }
@@ -48,7 +48,7 @@
 }
 .menu a{
     display: block;
-    padding: 25px;
+    padding: 30px;
     color:#fff;
     transition: all 0.3s ease-in-out;
 }
@@ -78,13 +78,11 @@
     width: 57px;
     margin-left: 4px;
 }
-.image-logo{
-    width: 100%;
-}
 @media(min-width: 768px){
     .logo{
         display: inline-block;
-        width: 60px;
+        width: 80px;
+        height: auto;
         margin-right: 20px;
         margin-left: 4px;
         position: relative;
@@ -101,6 +99,11 @@
         background-color: transparent;
         display: flex;
         justify-content: space-between;     
+    }
+    .nav-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
     .menu {
         display: flex;

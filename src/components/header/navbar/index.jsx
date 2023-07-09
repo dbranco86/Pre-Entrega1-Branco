@@ -22,7 +22,7 @@ const Navbar = () => {
                 <span className="hamb-line"></span>
             </label>
             <div className="logo">
-                <a href="#" className="logo">
+                <a href="/" className="logo">
                     <img className="image-logo" src="../src/assets/logo.png" alt=""/>
                 </a>
             </div>

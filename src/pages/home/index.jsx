@@ -20,13 +20,19 @@ function Home() {
                     </Link>
                 </div> 
                 <div className='imagesCard'>
-                    <ProductClass image="./src/assets/jeans.png" name="jeans" />
+                    <Link to="/products">
+                    <   ProductClass image="./src/assets/jeans.png" name="jeans" />
+                    </Link>
                 </div>  
                 <div className='imagesCard'>
-                    <ProductClass image="./src/assets/shirts.png" name="shirts" />
+                    <Link to="/products">
+                    <   ProductClass image="./src/assets/shirts.png" name="shirts" />
+                    </Link>
                 </div>  
                 <div className='imagesCard'>
-                    <ProductClass image="./src/assets/skirts.png" name="skirts" />
+                    <Link to="/products">
+                        <ProductClass image="./src/assets/skirts.png" name="skirts" />
+                    </Link>
                 </div> 
             </div>
         </div>

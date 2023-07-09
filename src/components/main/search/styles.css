@@ -53,3 +53,11 @@
     opacity: 1;
     color: #424242;
 }
+
+.inputContainer{
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    padding-top: 5px;
+    margin-top: 85px;
+}

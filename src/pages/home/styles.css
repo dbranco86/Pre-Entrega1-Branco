@@ -48,9 +48,3 @@ ul{
     margin: 3px;
     height: auto;
 }
-.inputContainer{
-    display: flex;
-    flex-direction: row;
-    margin-right: auto;
-    padding-top: 5px;
-}
