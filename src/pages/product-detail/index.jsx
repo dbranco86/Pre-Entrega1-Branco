@@ -11,11 +11,11 @@ function ProductDetail (){
     const urlProductDetail = `${API_URLS.PRODUCTS.url}/${productId}`
 
     const { data, loading, error  } = useFetch(urlProductDetail, API_URLS.PRODUCTS.config);
-    console.log({productId})
+    const history = window.history;
     return(
         <>
             <div className='headerDetailContainer'>
-            {history.length > 2 ? (<button onClick={() => navigate(-1)} className='backButton'> &#8592; Regresar</button>) : null}
+            {history.length > 1 ? (<button onClick={() => navigate(-1)} className='backButton'> &#8592; Regresar</button>) : null}
                 {loading && (
                 <div className='loaderContainer'>
                     <Loader />
