@@ -1,7 +1,19 @@
+import React, { useEffect } from 'react';
 import './styles.css'
 
 const Cover = () => {
-
+    
+    useEffect(() => {
+        const carousel = document.getElementById('carouselExampleRide'); 
+        const carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: 5500, 
+        });
+    
+        return () => {
+            carouselInstance.dispose();
+        };
+    }, []);
+    
     return (
         <section className='carousel'>
             <div id="carouselExampleRide" className='carousel-container' data-bs-ride="carousel">

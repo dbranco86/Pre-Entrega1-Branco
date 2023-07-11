@@ -1,38 +1,52 @@
-import React from "react"; 
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Cart from "../cart/index";
 import './styles.css';
 
 const Navbar = () => {
-    document.addEventListener('scroll', function() {
-        if (window.location.pathname === '/') {
-        var header = document.querySelector('.header');
-        var scrollPosition = window.scrollY;
+    const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
 
-        if (scrollPosition > 0) {
-            header.classList.add('header-colored');
-        } else {
-            header.classList.remove('header-colored');
-        }
-    }
-    });
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+        setIsScrolled(false);
+    }, [location]);
+
     return (
-        <header className="header">
+            <header className={`header ${isScrolled ? 'header-colored' : ''}`}>
             <input type="checkbox" className="side-menu" id="side-menu" />
             <label className="hamb" htmlFor="side-menu">
                 <span className="hamb-line"></span>
             </label>
             <div className="logo">
-                <a href="/" className="logo">
-                    <img className="image-logo" src="../../logo.png" alt=""/>
-                </a>
-            </div>
+                    <Link to="/" className="logo">
+                        <img className="image-logo" src="../../logo.png" alt=""/>
+                    </Link>
+            </div>           
             <nav className="nav">
-                <ul className="menu">
-                    <li><a href="#">Quienes somos</a></li>
-                    <li><a href="#">Nuestros Productos</a></li>
+                <ul className= "menu">
+                    <li>
+                    <Link to="/">Quienes somos</Link>
+                    </li>
+                    <li>
+                        <Link to="/products">Nuestros Productos</Link>
+                    </li>
                 </ul>
                 <ul className="menu">
-                    <li><a href="#">Iniciar Sesión</a></li>
+                    <li>
+                        <Link to="/">Iniciar Sesión</Link>
+                    </li>
                     <li class="nav-item">
                         <Cart />
                     </li>   

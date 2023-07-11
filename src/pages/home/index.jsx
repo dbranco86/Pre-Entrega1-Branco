@@ -21,12 +21,12 @@ function Home() {
                 </div> 
                 <div className='imagesCard'>
                     <Link to="/products">
-                    <   ProductClass image="../jeans.png" name="jeans" />
+                        <ProductClass image="../jeans.png" name="jeans" />
                     </Link>
                 </div>  
                 <div className='imagesCard'>
                     <Link to="/products">
-                    <   ProductClass image="../shirts.png" name="shirts" />
+                        <ProductClass image="../shirts.png" name="shirts" />
                     </Link>
                 </div>  
                 <div className='imagesCard'>

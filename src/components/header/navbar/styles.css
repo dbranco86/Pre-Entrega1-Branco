@@ -4,9 +4,13 @@
     width: 100%;
     height: auto;
     z-index: 9999;
+    transition: background-color 0.7s ease;
 }
 .header-colored{
     background-color: #000;
+}
+.header-transparent {
+    color: black;
 }
 .hamb{
     cursor: pointer;
