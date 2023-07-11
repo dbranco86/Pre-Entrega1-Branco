@@ -13,13 +13,13 @@ const Cover = () => {
                     </div>
                     <div class="carousel-inner carousel-transition">
                         <div class="carousel-item active carousel-transition" data-bs-interval="5500">
-                            <img src="../src/assets/image-cover-1.png" class="d-block w-100" alt="Imagen-carrusel-1" />
+                            <img src="../../image-cover-1.png" class="d-block w-100" alt="Imagen-carrusel-1" />
                         </div>
                         <div class="carousel-item carousel-transition" data-bs-interval="5500">
-                            <img src="../src/assets/image-cover-2.png" class="d-block w-100" alt="Imagen-carrusel-2" />
+                            <img src="../../image-cover-2.png" class="d-block w-100" alt="Imagen-carrusel-2" />
                         </div>
                         <div class="carousel-item carousel-transition" data-bs-interval="5500">
-                            <img src="../src/assets/image-cover-3.png" class="d-block w-100" alt="Imagen-carrusel-3"/>
+                            <img src="../../image-cover-3.png" class="d-block w-100" alt="Imagen-carrusel-3"/>
                         </div>
                     </div>
                 </div>

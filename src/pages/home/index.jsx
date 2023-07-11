@@ -16,22 +16,22 @@ function Home() {
             <div className='imagesContainer'>
                 <div className='imagesCard'> 
                     <Link to="/products">
-                        <ProductClass image="./src/assets/dresses.png" name="dresses" />
+                        <ProductClass image="../dresses.png" name="dresses" />
                     </Link>
                 </div> 
                 <div className='imagesCard'>
                     <Link to="/products">
-                    <   ProductClass image="./src/assets/jeans.png" name="jeans" />
+                    <   ProductClass image="../jeans.png" name="jeans" />
                     </Link>
                 </div>  
                 <div className='imagesCard'>
                     <Link to="/products">
-                    <   ProductClass image="./src/assets/shirts.png" name="shirts" />
+                    <   ProductClass image="../shirts.png" name="shirts" />
                     </Link>
                 </div>  
                 <div className='imagesCard'>
                     <Link to="/products">
-                        <ProductClass image="./src/assets/skirts.png" name="skirts" />
+                        <ProductClass image="../skirts.png" name="skirts" />
                     </Link>
                 </div> 
             </div>
