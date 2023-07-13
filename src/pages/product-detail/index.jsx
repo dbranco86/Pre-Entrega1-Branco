@@ -1,31 +1,33 @@
 import { useNavigate, useParams } from 'react-router-dom';
-import { API_URLS } from '../../constants';
-import { useFetch } from '../../hooks/useFetch';
-import Details from '../../components/main/products/details'
+import fixedProducts from '../../constants';
+import Details from '../../components/main/products/details';
 import Loader from '../../components/main/loader';
-import './styles.css'
+import './styles.css';
 
-function ProductDetail (){
-    const { productId} = useParams();
+function ProductDetail() {
+    const { productId } = useParams();
     const navigate = useNavigate();
-    const urlProductDetail = `${API_URLS.PRODUCTS.url}/${productId}`
 
-    const { data, loading, error  } = useFetch(urlProductDetail, API_URLS.PRODUCTS.config);
-    const history = window.history;
-    return(
+  // Buscar el producto correspondiente en fixedProducts
+    const product = fixedProducts.find((product) => product.id === productId);
+
+        return (
         <>
-            <div className='headerDetailContainer'>
-            {history.length > 1 ? (<button onClick={() => navigate(-1)} className='backButton'> &#8592; Regresar</button>) : null}
-                {loading && (
-                <div className='loaderContainer'>
-                    <Loader />
-                </div>
+            <div className="headerDetailContainer">
+                <button onClick={() => navigate(-1)} className="backButton">
+                    &#8592; Regresar
+                </button>
+                {product ? (
+                    <Details {...product} />
+                ) : (
+                    <>
+                    <p>Product not found</p>
+                        <Loader />
+                    </>
                 )}
-                {error && <p>Something went wrong</p>}
-                {<Details {...data} />}
             </div>
         </>
-    )
+    );
 }
 
-export default ProductDetail
+export default ProductDetail;

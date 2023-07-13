@@ -9,7 +9,6 @@
     margin: 0.5rem;
     padding: 1rem;
     max-width: 380px;
-    height: 480px;
     transition: all 0.3s ease-in-out;
 }
 .card:hover {
