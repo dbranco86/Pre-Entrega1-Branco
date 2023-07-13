@@ -114,7 +114,7 @@
     .cardDetailImage {
         width: 400px;
         height: 400px;
-        object-fit: cover;
+        object-fit: contain;
     }
     .cardDetailContent {
         display: flex;

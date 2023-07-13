@@ -18,6 +18,7 @@ function ProductList() {
 
     useEffect(() => {
         filterByCategory(selectedCategory);
+        window.scrollTo(0, 0);
     }, [selectedCategory]);
 
     const onShowDetails = (id) => {
