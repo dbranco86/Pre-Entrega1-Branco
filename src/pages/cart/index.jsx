@@ -1,10 +1,17 @@
 
 import { useContext } from 'react'
-import './styles.css'
 import { CartContext } from '../../components/context/cart-context'
+import { useNavigate } from 'react-router-dom';
+import './styles.css'
 
 function Cart () {
-    const {cart, onAddToCart, onRemoveItem, onDecreaseItem, total} = useContext(CartContext)
+    const navigate = useNavigate();
+    const {cart, onAddToCart, onRemoveItem, onDecreaseItem, total} = useContext(CartContext);
+
+    const onHandlerCheckout = () => {
+        navigate('/checkout')
+    }
+
     return (
         <div className='totalCartContainer'> 
             <div className='cartText'> 
@@ -37,7 +44,12 @@ function Cart () {
                     ))
                 }
                 {
-                    cart?.length > 0 && <p className='cartTotal'>Total: USD {total} </p>
+                    cart?.length > 0 && (
+                        <div className='cartDetailActions'>
+                            <p className='cartTotal'>Total: USD {total} </p>
+                            <button onClick={onHandlerCheckout} className='cartButttonCheckout'>Checkout</button>
+                        </div>
+                    )
                 }
             </div>
         </div>

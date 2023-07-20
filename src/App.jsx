@@ -5,6 +5,7 @@ import Navbar from './components/header/navbar/index'
 import ProductList from './pages/products-list'
 import ProductDetail from './pages/product-detail'
 import Cart from './pages/cart'
+import Checkout from './pages/checkout'
 import './App.css'
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/products' element={<ProductList />} />
           <Route path='/products/:productId' element={<ProductDetail />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/checkout' element={<Checkout />} />
         </Routes>
       </CartProvider>
     </div>

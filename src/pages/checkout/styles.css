@@ -1,0 +1,19 @@
+.checkoutContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.checkoutForm{
+    display: flex;
+    flex-direction: column;
+    max-width: 40vw;
+}
+.checkoutFormContainer{
+    padding: 1rem 0;
+}
+.checkoutFormInputGroup{
+    padding: 1rem 0;
+    height: auto;
+}
