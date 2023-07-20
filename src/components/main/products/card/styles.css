@@ -57,13 +57,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    align-items: end;
     padding: 1rem;
-    position: absolute;
     bottom: 0;
 
 }
-
 .cardActions button {
     border: none;
     background-color: #000;
@@ -71,4 +68,12 @@
     padding: 1rem;
     border-radius: 0.2rem;
     height: auto;
+}
+.cartButttonContainer {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.cartButttonContainer:active {
+    outline: none;
 }

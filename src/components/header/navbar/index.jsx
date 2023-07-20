@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import Cart from "../cart/index";
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import CartComponent from "../cart-component/index";
 import './styles.css';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,6 +18,10 @@ const Navbar = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const goToCart = () => {
+        navigate('/cart');
+    }
 
     return (
         <header className={`header ${location.pathname === '/' && !isScrolled ? 'header-transparent' : 'header-colored'}`}>
@@ -42,8 +47,8 @@ const Navbar = () => {
                     <li>
                         <Link to="/">Iniciar Sesión</Link>
                     </li>
-                    <li class="nav-item">
-                        <Cart />
+                    <li onClick={goToCart} class="nav-item">
+                        <CartComponent />
                     </li>   
                 </ul>
             </nav>

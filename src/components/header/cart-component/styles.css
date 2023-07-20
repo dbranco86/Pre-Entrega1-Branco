@@ -16,11 +16,13 @@
 .num {
     background: linear-gradient(to right, hsl(105, 50%, 45%), hsl(62, 80%, 60%), hsl(322, 90%, 40%));
     border-radius: 50%;
-    height: 24px; 
-    width: 24px; 
+    height: 20px; 
+    width: 20px; 
     color: #fff;
     font-size: 12px; 
     text-align: center;
-    line-height: 24px; 
+    line-height: 20px; 
+    margin-top: -5px;
+    margin-left: -5px;
 }
 

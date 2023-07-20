@@ -8,7 +8,6 @@ function ProductDetail() {
     const { productId } = useParams();
     const navigate = useNavigate();
 
-  // Buscar el producto correspondiente en fixedProducts
     const product = fixedProducts.find((product) => product.id === productId);
 
         return (

@@ -1,8 +1,7 @@
 .cardDetail{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 0.5rem;
     height: auto;
 }
 
@@ -19,11 +18,12 @@
     height: auto;
     background-color: #fff;
 }
-/**/
+
 .cardDetailName {
     font-size: 2rem;
     height: 70px;
 }
+
 .cardDetailCategory {
     font-size: 1.2rem;
     color: #000;
@@ -31,6 +31,7 @@
     height: auto;
     padding-top: 1rem;
 }
+
 .cardDetailDescription {
     font-size: 1rem;
     padding: 0.3rem 0;
@@ -38,6 +39,7 @@
     text-align: center;
     height: 150px;
 }
+
 .cardDetailPrice {
     font-size: 1.5rem;
     font-weight: bold;
@@ -45,11 +47,13 @@
     padding: 0.3rem 0;
     height: auto;
 }
+
 .cardDetailStock {
     font-size: 1rem;
     padding: 0.3rem 0;
     height: auto;
 }
+
 .cardDetailActions {
     display: flex;
     width: 100%;
@@ -90,13 +94,16 @@
     border-bottom: 1px solid #000;
     scale: 1.02;
 }
+
 .headerTitleCard{
     padding-left: 1rem;
 }
+
 .headerDetailContainer .backButton {
     margin-right: auto;
     padding-bottom: 5px;
 }
+
 @media(min-width: 768px){
     .cardDetail {
         background-color: #ffffff;

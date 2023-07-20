@@ -4,6 +4,7 @@ const Card = ({ id, image, name, category, description, price, stock, onAddToCar
 
     return (
         <div className='card' onClick={() => onShowDetails(id)}>
+            <button className='cartButttonContainer' type='button'>
             <img className='cardImage' src={image} alt={name} />
             <div className='cardContent'>
                 <h3 className='cardName'>{name}</h3>
@@ -12,8 +13,12 @@ const Card = ({ id, image, name, category, description, price, stock, onAddToCar
                 <p className='cardPrice'>USD {price}</p>
                 <p className='cardStock'>{stock} left</p>
             </div>
+            </button>
             <div className='cardActions'>
-                <button onClick={() => onAddToCart(id)} className='cardButton'>Agregar al carrito</button>
+            <button onClick={(event) => {
+                event.stopPropagation(); 
+                onAddToCart(id);
+                }} className='cardButton'>Agregar al carrito</button>
             </div>
         </div>
     )

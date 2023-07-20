@@ -76,7 +76,7 @@ const fixedProducts = [
     "category": "Jeans",
     "taps": "Bacon",
     "image": "../jeans2.png",
-    "stock": "1",
+    "stock": "5",
     "id": "6"
     },
     {

@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext, memo } from 'react';
+import { CartContext } from '../../components/context/cart-context';
 import fixedProducts from '../../constants';
 import Input from '../../components/main/search';
 import Card from '../../components/main/products/card/index';
@@ -13,8 +14,9 @@ function ProductList() {
     const queryParams = new URLSearchParams(location.search);
     const selectedCategory = queryParams.get('category');
     const navigate = useNavigate();
-
     const products = fixedProducts;
+
+    const { setProducts, products: productsContext, onAddToCart, cart} = useContext(CartContext);
 
     useEffect(() => {
         filterByCategory(selectedCategory);
@@ -64,6 +66,12 @@ function ProductList() {
         setActive(false);
     };
 
+    useEffect(() => {
+        if(products?.length > 0) {
+            setProducts(products);
+        }
+    }, [products, setProducts])
+
     return (
         <>
             <div className="inputContainer">
@@ -86,7 +94,7 @@ function ProductList() {
                     <Card
                         key={product.id}
                         {...product}
-                        onShowDetails={onShowDetails}
+                        onShowDetails={onShowDetails} onAddToCart={onAddToCart}
                     />
                 ))}
             </div>
@@ -94,4 +102,4 @@ function ProductList() {
     );
 }
 
-export default ProductList;
+export default memo (ProductList);
