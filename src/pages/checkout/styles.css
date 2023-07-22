@@ -17,3 +17,26 @@
     padding: 1rem 0;
     height: auto;
 }
+.butttonCheckout{
+    border: none;
+    background-color: #000;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    height: auto;
+}
+.butttonCheckout:hover {
+    background-color: #000;
+}
+
+.butttonCheckout:disabled {
+    background-color: #464646;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+@media(max-width: 768px){
+    .checkoutForm{
+        max-width: 100%;
+    }
+}

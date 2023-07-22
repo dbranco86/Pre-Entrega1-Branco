@@ -61,3 +61,8 @@
     padding-top: 5px;
     margin-top: 85px;
 }
+
+.error{
+    color: #D53734;
+    font-weight:200;
+}

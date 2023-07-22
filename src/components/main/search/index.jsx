@@ -5,18 +5,22 @@ const Input = ({
     type = 'text', 
     id, 
     required = false,
+    label,
     name,
     onFocus,
     onBlur,
     onChange,
     value,
     active,
+    error,
+    hasError,
 }) => {
     const inputClass = `container ${active ? 'active' : ''}`
     return (
         <div className={inputClass}>
             <input 
                 id={id}
+                name= {name}
                 type={type} 
                 placeholder={placeholder}
                 required={required}
@@ -28,8 +32,11 @@ const Input = ({
             <label 
                 htmlFor={id}
             >
-                {name}
+                {label}
             </label>
+            {hasError && (
+                <span className='error'>{error}</span>
+            )}
         </div>
     )
 }
