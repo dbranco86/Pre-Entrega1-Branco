@@ -11,7 +11,7 @@ function Cart () {
     const onHandlerCheckout = () => {
         navigate('/checkout')
     }
-
+    console.log({cart})
     return (
         <div className='totalCartContainer'> 
             <div className='cartText'> 

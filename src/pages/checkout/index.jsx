@@ -16,7 +16,8 @@ const initialState = {
 
 function Checkout () {
     const [formState, inputHandler, clearInputs, inputFocus, inputBlur] = useForm(initialState)
-
+    /*const {cart, total} = useContext(CartContext);*/
+    
     const onChange = (event) => {
         const { name, value } = event.target
         inputHandler({ name, value })
@@ -29,6 +30,40 @@ function Checkout () {
     const onBlur = ({ name }) => {
         inputBlur({ name })
     }
+
+   /* const onHandlerOrder = async () => {
+        const newOrder = {
+            buyer: {
+                name: formState.name.value,
+                surname: formState.surname.value,
+                document: formState.document.value,
+                email: formState.email.value,
+                phone: formState.phone.value,
+                address: formState.address.value,
+                postalCode: formState.postalCode.value,
+            },
+            createdAt: new Date(),
+            id: 1,
+            items: cart,
+            payment: {
+                currency: 'PEN',
+                method: 'CASH',
+                type: 'CASH'
+            },
+            seller: {
+                id: 1,
+                name: 'Pedrito',
+                phone: '123456789',
+                email: 'pedrito@modaperucha.com'
+            },
+            shipping: {
+                deliverDate: new Date() + 7,
+                trackingNumber: '123456ff227aa89',
+                type: 'DELIVERY'
+            },
+            total: total
+        }
+    }*/
 
     const onSubmit = (event) => {
         event.preventDefault()
@@ -153,7 +188,9 @@ function Checkout () {
                         />
                     </div>
                 </div>
-                <button disabled={!formState.isFormValid} type='submit' className='butttonCheckout'>Checkout</button>
+                <div className='buttonContainer'> 
+                    <button disabled={!formState.isFormValid} type='submit' className='butttonCheckout'>Checkout</button>
+                </div>
             </form>
         </div>
     )

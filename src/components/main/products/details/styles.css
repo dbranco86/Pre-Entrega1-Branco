@@ -70,6 +70,12 @@
     border: solid 1px #000;
     height: fit-content;
     width: 200px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cardDetailActions button:hover {
+    background-color: #000;
+    color: #ffffff;
 }
 
 .headerDetailContainer {

@@ -59,15 +59,19 @@
     align-items: center;
     padding: 1rem;
     bottom: 0;
-
 }
 .cardActions button {
     border: none;
+    background-color: #ffffff;
+    color: #000;
+    border: solid 1px #000;
+    padding: 1rem;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+}
+.cardActions button:hover {
     background-color: #000;
     color: #ffffff;
-    padding: 1rem;
-    border-radius: 0.2rem;
-    height: auto;
 }
 .cartButttonContainer {
     border: none;
