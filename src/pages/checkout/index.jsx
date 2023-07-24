@@ -72,8 +72,8 @@ function Checkout () {
 
     return (
         <div className='checkoutContainer'>
-            <h1 className='checkoutTitle'>Checkout</h1>
             <form onSubmit={onSubmit} className='checkoutForm'>
+            <h1 className='checkoutTitle'>Checkout</h1>
                 <div className='checkoutFormContainer'>
                     <div className='checkoutFormInputGroup'>
                         <Input address
@@ -192,6 +192,9 @@ function Checkout () {
                     <button disabled={!formState.isFormValid} type='submit' className='butttonCheckout'>Checkout</button>
                 </div>
             </form>
+            <div className='imageCheckoutContainer'>
+                <img className='imageCheckout' src="../../../logo.png" alt="" />
+            </div>
         </div>
     )
 }

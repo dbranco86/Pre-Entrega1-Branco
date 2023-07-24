@@ -9,6 +9,9 @@
     justify-content: center;
     height: auto;
 }
+.cartText h2{
+    font-weight: bold;
+}
 .cartContainer{
     background-color: #ffffff;
     display: flex;
@@ -24,6 +27,7 @@
     margin: 1rem;
     padding: 1rem;
     width: 100%;
+    height: auto;
     box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
 }
 .cardImageContainer{
@@ -103,11 +107,12 @@
 .cartDetailActions {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     flex-direction: row;
     max-width: 500px;
+    height: auto;
+    padding-top: 1rem;
 }
-
 .cartButttonCheckout {
     background-color: #fff;
     color: #000;
@@ -116,10 +121,16 @@
     border-color: #000;
     border: solid 1px #000;
     transition: all 0.3s ease-in-out;
+    margin-left: 1rem;
     height: auto;
 }
-
 .cartButttonCheckout:hover {
     background-color: #000;
     color: #ffffff;
+}
+
+@media(max-width: 768px){
+    .cartItem{
+        flex-direction: column;
+    }
 }

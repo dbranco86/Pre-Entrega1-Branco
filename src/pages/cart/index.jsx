@@ -15,7 +15,7 @@ function Cart () {
     return (
         <div className='totalCartContainer'> 
             <div className='cartText'> 
-                <h2>Carrito</h2>
+                <h2>Carrito de compra</h2>
             </div>
             <div className='cartContainer'>
                 {cart.length === 0 && <h3>Carrito Vacio</h3>}

@@ -1,13 +1,15 @@
 .checkoutContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 2rem;
     margin-top: 4rem;
 }
 .checkoutForm{
     display: flex;
     flex-direction: column;
-    max-width: 40vw;
+    width: 50%;
 }
 .checkoutTitle{
     height: auto;
@@ -23,7 +25,6 @@
 .buttonContainer{
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 .butttonCheckout{
     border: none;
@@ -41,9 +42,23 @@
     color: #ffffff;
     cursor: not-allowed;
 }
+.imageCheckoutContainer{
+    width: 50%;
+}
+.imageCheckout{
+    width: 100%;
+    height: auto;
+}
 
 @media(max-width: 768px){
     .checkoutForm{
-        max-width: 100%;
+       width: 100%;
+       max-width: 100%;
+    }
+    .imageCheckoutContainer{
+        display: none;
+    }
+    .checkoutContainer{
+        flex-direction: column;
     }
 }
