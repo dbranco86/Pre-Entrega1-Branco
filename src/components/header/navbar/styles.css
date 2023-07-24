@@ -80,7 +80,8 @@
     top: 0;
 }
 .logo{
-    width: 57px;
+    max-width: 100%;
+    width: 15%;
     margin-left: 4px;
 }
 .image-logo{

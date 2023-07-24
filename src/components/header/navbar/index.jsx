@@ -30,7 +30,7 @@ const Navbar = () => {
                 <span className="hamb-line"></span>
             </label>
             <div className="logo">
-                    <Link to="/" className="logo">
+                    <Link to="/">
                         <img className="image-logo" src="../../logo.png" alt=""/>
                     </Link>
             </div>           
