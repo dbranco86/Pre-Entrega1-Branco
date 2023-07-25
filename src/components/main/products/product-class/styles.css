@@ -9,6 +9,7 @@
     max-height: 500px;
     cursor: pointer;
     overflow: hidden;
+    margin-top: 2rem; 
 }
 .imageClass {
     width: 100%;
