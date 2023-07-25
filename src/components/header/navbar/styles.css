@@ -3,11 +3,12 @@
     top: 0;
     width: 100%;
     height: auto;
-    z-index: 9999;
+    z-index: 99;
     transition: background-color 0.7s ease;
 }
 .header-colored{
     background-color: #000;
+    z-index: 1000;
 }
 .header-transparent {
     color: black;
@@ -60,6 +61,15 @@
     background-color: #fff;
     color: #000;
 }
+.menu ul {
+    width: 100%;
+}
+
+.menu li {
+    margin-right: 10px;
+    margin-left: 0px;
+    display: block; /* Asegura que los elementos li se muestren como bloques */
+}
 .side-menu{
     display: none;
 }
@@ -91,6 +101,7 @@
     margin-right: 10px;
     margin-left: 0px;
 }
+
 @media(min-width: 769px){
     .header{
         position: fixed;

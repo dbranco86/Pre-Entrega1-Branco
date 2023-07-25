@@ -196,6 +196,7 @@
     .headerDetailContainer .backButton:hover{
         border-bottom: 1px solid #000;
         scale: 1.02;
+        color: #000;
     }    
     .cardDetailImageContainer{
         display: flex;
