@@ -1,12 +1,11 @@
 .cart-btn {
     display: flex;
-    padding: 15px;
     transition: all 0.3s ease-in-out;
     width: auto; 
     background-color: transparent;
     border-color: transparent;
     margin-right: 20px;
-    margin-top: 3px;
+    margin-top: -5px;
     height: auto;
 }
 .cart {

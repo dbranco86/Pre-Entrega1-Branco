@@ -42,6 +42,7 @@
     font-size: 0.9rem;
     padding: 0.3rem 0;
     text-align: center;
+    color: #000;
 }
 .cardPrice {
     font-size: 1.1rem;
@@ -52,6 +53,7 @@
 .cardStock {
     font-size: 0.8rem;
     padding: 0.3rem 0;
+    color: #000;
 }
 .cardActions {
     display: flex;

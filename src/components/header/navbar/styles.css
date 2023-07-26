@@ -54,6 +54,7 @@
 .menu a{
     display: block;
     padding: 25px;
+    font-size: larger;
     color:#fff;
     transition: all 0.3s ease-in-out;
 }
@@ -68,7 +69,8 @@
 .menu li {
     margin-right: 10px;
     margin-left: 0px;
-    display: block; /* Asegura que los elementos li se muestren como bloques */
+    display: block; 
+    cursor: pointer;
 }
 .side-menu{
     display: none;
