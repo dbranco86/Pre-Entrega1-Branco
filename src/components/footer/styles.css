@@ -1,0 +1,41 @@
+.footerContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-top: 7rem;
+    bottom: 0;
+}
+.footerSection{
+    padding: 0 20px;
+    flex-basis: auto;
+}
+.titleFooter{
+    margin-bottom: 25px;
+    height: auto;
+    font-weight: 700;
+    font-size: 16px;
+    color: inherit;
+}
+.itemListfooter{
+    list-style: none;
+    padding: 0;
+}
+.itemListfooter li{
+    height: 2rem;
+    color: #423f3f;
+}
+.itemListfooter a{
+    color: #423f3f;
+    font-weight: bold;
+}
+
+@media(max-width: 769px){
+    .footerSection{
+        height: auto;
+        margin-bottom: 3rem
+    }
+
+}

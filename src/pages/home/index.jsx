@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Navbar from '../../components/header/navbar/index'
 import Covers from '../../components/main/cover/index';
 import ProductClass from '../../components/main/products/product-class/index';
+import Footer from '../../components/footer';
 import './styles.css'
 
 

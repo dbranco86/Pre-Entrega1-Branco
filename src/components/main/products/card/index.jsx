@@ -15,10 +15,11 @@ const Card = ({ id, image, name, category, description, price, stock, onAddToCar
             </div>
             </button>
             <div className='cardActions'>
-            <button onClick={(event) => {
-                event.stopPropagation(); 
-                onAddToCart(id);
-                }} className='cardButton'>Agregar al carrito</button>
+                <button onClick={(event) => {
+                    event.stopPropagation(); 
+                    onAddToCart(id);
+                    }} className='cardButton'>Agregar al carrito
+                </button>
             </div>
         </div>
     )
