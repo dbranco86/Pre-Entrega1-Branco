@@ -6,6 +6,7 @@ import Input from '../../components/main/search';
 import Card from '../../components/main/products/card/index';
 import './styles.css';
 
+
 function ProductList() {
     const [search, setSearch] = useState('');
     const [active, setActive] = useState(false);

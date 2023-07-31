@@ -85,6 +85,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 100px;
+    height: fit-content;
 }
 
 .headerDetailContainer .backButton {
@@ -93,6 +94,7 @@
     font-size: 1rem;
     padding: 0;
     margin: 0;
+    height: auto;
     margin-right: auto;
     padding-bottom: 5px;
     transition: all 0.1s ease-in-out;

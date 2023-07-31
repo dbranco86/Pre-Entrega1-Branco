@@ -1,7 +1,7 @@
 import './styles.css'
 
 const Footer = () => {
-
+    
     return (
         <div className='footerContainer'>
             <div className='footerSection'>

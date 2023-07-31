@@ -4,6 +4,7 @@ import { CartContext } from '../../components/context/cart-context'
 import { useNavigate } from 'react-router-dom';
 import './styles.css'
 
+
 function Cart () {
     const navigate = useNavigate();
     const {cart, onAddToCart, onRemoveItem, onDecreaseItem, total} = useContext(CartContext);
@@ -13,6 +14,7 @@ function Cart () {
     }
     console.log({cart})
     return (
+        <>
         <div className='totalCartContainer'> 
             <div className='cartText'> 
                 <h2>Carrito de compra</h2>
@@ -53,6 +55,7 @@ function Cart () {
                 }
             </div>
         </div>
+        </>
     )
 }
 

@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import Navbar from '../../components/header/navbar/index'
 import Covers from '../../components/main/cover/index';
 import ProductClass from '../../components/main/products/product-class/index';
-import Footer from '../../components/footer';
 import './styles.css'
 
 
@@ -11,8 +9,8 @@ function Home() {
     const [selectedCategory, setSelectedCategory] = useState('');
 
     return (  
+        <>
         <div className='main-container'>
-            <Navbar /> 
             <div className='coversContainer'>
                 <Covers /> 
             </div>
@@ -39,6 +37,7 @@ function Home() {
                 </div> 
             </div>
         </div>
+        </>
     )
 }
 
