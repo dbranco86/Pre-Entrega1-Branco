@@ -1,5 +1,9 @@
-import { useState } from 'react';
 import { useForm } from '../../hooks/useForm';
+import { useQuery } from '../../hooks/useQuery'
+import { firebaseServices } from '../../services/firebase';
+import { useContext, useEffect} from 'react'
+import { useLocation} from 'react-router-dom'
+import { CartContext } from '../../components/context/cart-context'
 import Input from '../../components/main/search';
 import './styles.css'
 
@@ -16,7 +20,28 @@ const initialState = {
 
 function Checkout () {
     const [formState, inputHandler, clearInputs, inputFocus, inputBlur] = useForm(initialState)
-    /*const {cart, total} = useContext(CartContext);*/
+    const {cart, total, setCart} = useContext(CartContext);
+    const { state } = useLocation();
+    let query = useQuery();
+
+    useEffect(() => {
+        const cartId = query.get("cartId") 
+        
+        if(query.get("cartId")) {
+            const getCart = async () => {
+                const cart = await firebaseServices.getCartById(cartId)
+                return cart
+            }
+            getCart()
+                .then((cart) => {
+                    setCart(cart.items)
+                })
+                .catch((error) => {
+                    console.log({error})
+                })
+        }
+
+    }, [query])
     
     const onChange = (event) => {
         const { name, value } = event.target
@@ -31,7 +56,7 @@ function Checkout () {
         inputBlur({ name })
     }
 
-   /* const onHandlerOrder = async () => {
+    const onHandlerOrder = async () => {
         const newOrder = {
             buyer: {
                 name: formState.name.value,
@@ -43,10 +68,9 @@ function Checkout () {
                 postalCode: formState.postalCode.value,
             },
             createdAt: new Date(),
-            id: 1,
             items: cart,
             payment: {
-                currency: 'PEN',
+                currency: 'USD',
                 method: 'CASH',
                 type: 'CASH'
             },
@@ -54,7 +78,7 @@ function Checkout () {
                 id: 1,
                 name: 'Pedrito',
                 phone: '123456789',
-                email: 'pedrito@modaperucha.com'
+                email: 'pedrito@taskmanager.com'
             },
             shipping: {
                 deliverDate: new Date() + 7,
@@ -63,11 +87,20 @@ function Checkout () {
             },
             total: total
         }
-    }*/
 
-    const onSubmit = (event) => {
+        const orderId = await firebaseServices.createOrder(newOrder)
+        await firebaseServices.updateCart(state.cartId)
+
+        return {
+            orderId,
+        }
+    }
+
+    const onSubmit = async (event) => {
         event.preventDefault()
-        console.log('formState', formState)
+        const { orderId } = await onHandlerOrder();
+        clearInputs({ formState })
+        navigate('/success-order', { state: { orderId: orderId.id } })
     }
 
     return (
