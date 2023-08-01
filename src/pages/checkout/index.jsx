@@ -2,7 +2,7 @@ import { useForm } from '../../hooks/useForm';
 import { useQuery } from '../../hooks/useQuery'
 import { firebaseServices } from '../../services/firebase';
 import { useContext, useEffect} from 'react'
-import { useLocation} from 'react-router-dom'
+import { useLocation, useNavigate} from 'react-router-dom'
 import { CartContext } from '../../components/context/cart-context'
 import Input from '../../components/main/search';
 import './styles.css'
@@ -22,6 +22,7 @@ function Checkout () {
     const [formState, inputHandler, clearInputs, inputFocus, inputBlur] = useForm(initialState)
     const {cart, total, setCart} = useContext(CartContext);
     const { state } = useLocation();
+    const navigate = useNavigate();
     let query = useQuery();
 
     useEffect(() => {
@@ -42,6 +43,7 @@ function Checkout () {
         }
 
     }, [query])
+
     
     const onChange = (event) => {
         const { name, value } = event.target
