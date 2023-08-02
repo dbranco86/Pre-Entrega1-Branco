@@ -1,0 +1,16 @@
+.imagesContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+    justify-content: center;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.imagesCard{
+    margin: 3px;
+    height: auto;
+}
+

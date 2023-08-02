@@ -6,7 +6,6 @@ import Input from '../../components/main/search';
 import Card from '../../components/main/products/card/index';
 import './styles.css';
 
-
 function ProductList() {
     const [search, setSearch] = useState('');
     const [active, setActive] = useState(false);
@@ -17,46 +16,38 @@ function ProductList() {
     const navigate = useNavigate();
     const products = fixedProducts;
 
-    const { setProducts, products: productsContext, onAddToCart, cart} = useContext(CartContext);
+    const { setProducts, products: productsContext, onAddToCart, cart } = useContext(CartContext);
 
     useEffect(() => {
-        filterByCategory(selectedCategory);
+        filterProducts();
         window.scrollTo(0, 0);
-    }, [selectedCategory]);
+    }, [selectedCategory, search]);
 
     const onShowDetails = (id) => {
         navigate(`/products/${id}`);
     };
 
-    const filterBySearch = (query) => {
+    const filterProducts = () => {
         let updatedProductList = [...products];
 
-        updatedProductList = updatedProductList.filter(
-            (item) =>
-                item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1
-        );
+        if (selectedCategory) {
+            updatedProductList = updatedProductList.filter(
+                (item) => item.category === selectedCategory
+            );
+        }
+
+        if (search) {
+            updatedProductList = updatedProductList.filter(
+                (item) => item.name.toLowerCase().indexOf(search.toLowerCase()) !== -1
+            );
+        }
 
         setProductFiltered(updatedProductList);
-    };
-
-    const filterByCategory = (category) => {
-        if (category) {
-            let updatedProductList = [...products];
-
-            updatedProductList = updatedProductList.filter(
-                (item) => item.category === category
-            );
-
-            setProductFiltered(updatedProductList);
-        } else {
-            setProductFiltered(products);
-        }
     };
 
     const onChange = (event) => {
         const value = event.target.value;
         setSearch(value);
-        filterBySearch(value);
     };
 
     const onFocus = () => {
@@ -68,10 +59,10 @@ function ProductList() {
     };
 
     useEffect(() => {
-        if(products?.length > 0) {
+        if (products?.length > 0) {
             setProducts(products);
         }
-    }, [products, setProducts])
+    }, [products, setProducts]);
 
     return (
         <>
@@ -81,6 +72,7 @@ function ProductList() {
                     id="task"
                     required={true}
                     name="Search"
+                    value={search}
                     onChange={onChange}
                     onFocus={onFocus}
                     onBlur={onBlur}
@@ -95,7 +87,8 @@ function ProductList() {
                     <Card
                         key={product.id}
                         {...product}
-                        onShowDetails={onShowDetails} onAddToCart={onAddToCart}
+                        onShowDetails={onShowDetails}
+                        onAddToCart={onAddToCart}
                     />
                 ))}
             </div>
@@ -103,4 +96,4 @@ function ProductList() {
     );
 }
 
-export default memo (ProductList);
+export default memo(ProductList);

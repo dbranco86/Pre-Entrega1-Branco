@@ -5,7 +5,10 @@ import { useContext, useEffect} from 'react'
 import { useLocation, useNavigate} from 'react-router-dom'
 import { CartContext } from '../../components/context/cart-context'
 import Input from '../../components/main/search';
+import CartItem from '../../components/main/cart/item';
+import Total from '../../components/main/cart/total';
 import './styles.css'
+
 
 const initialState = {
     name : { value: '', error: '', hasError: true, active: false, name: 'name' },
@@ -20,7 +23,7 @@ const initialState = {
 
 function Checkout () {
     const [formState, inputHandler, clearInputs, inputFocus, inputBlur] = useForm(initialState)
-    const {cart, total, setCart} = useContext(CartContext);
+    const {cart, total, setCart, onAddToCart, onDecreaseItem, onRemoveItem} = useContext(CartContext);
     const { state } = useLocation();
     const navigate = useNavigate();
     let query = useQuery();
@@ -227,9 +230,17 @@ function Checkout () {
                     <button disabled={!formState.isFormValid} type='submit' className='butttonCheckout'>Checkout</button>
                 </div>
             </form>
-            <div className='imageCheckoutContainer'>
-                <img className='imageCheckout' src="../../../logo.png" alt="" />
-            </div>
+            {cart?.length > 0 ? (
+                <div className='cartCheckoutContainer'>
+                    <h2>Detalle del carrito</h2>
+                    {
+                        cart.map((product) => (
+                            <CartItem key={product.id}{...product} onAddToCart={onAddToCart} onDecreaseItem={onDecreaseItem} onRemoveItem={onRemoveItem} />
+                        ))
+                    }
+                    <Total total={total} />
+                </div>
+            ) : null}           
         </div>
     )
 }
