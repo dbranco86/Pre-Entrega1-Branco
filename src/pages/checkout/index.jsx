@@ -61,6 +61,10 @@ function Checkout () {
         inputBlur({ name })
     }
 
+    const clearCart = () => {
+        setCart([]);
+    }
+
     const onHandlerOrder = async () => {
         const newOrder = {
             buyer: {
@@ -95,7 +99,8 @@ function Checkout () {
 
         const orderId = await firebaseServices.createOrder(newOrder)
         await firebaseServices.updateCart(state.cartId)
-
+        clearCart();
+        
         return {
             orderId,
         }
