@@ -1,29 +1,50 @@
-/*Estilos Genericos*/
-*{
+/* Estilos Genericos */
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  height: -webkit-fill-available;
 }
 
-body{
+body {
   background-color: #fff;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-ul{
+ul {
   list-style: none;
 }
-.allcontainer{
+
+html,
+body,
+#root {
+  height: 100%; 
+}
+
+.allcontainer {
   display: flex;
   flex-direction: column;
+  min-height: 100vh; 
   justify-content: space-between;
 }
 
+.main-container {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+}
 
-
+.coversContainer {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
+  padding: 0;
+  position: relative;
+  top: 0;
+}
 
