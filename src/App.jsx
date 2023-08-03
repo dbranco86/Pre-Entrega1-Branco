@@ -5,15 +5,11 @@ import Footer from './components/footer'
 import './App.css'
 
 
-
-
-
-
 function App() {  
   return (  
       <CartProvider>
         <div className='allcontainer'>
-          <div>
+          <div className='mainContainer'>
             <Navbar />  
             <Router />
           </div>

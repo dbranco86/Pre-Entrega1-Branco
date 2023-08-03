@@ -22,15 +22,10 @@ ul{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh
 }
 
-@media(max-width: 768px){
-  .allcontainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+.mainContainer{
+  min-height: 100vh;
 }
 
 
