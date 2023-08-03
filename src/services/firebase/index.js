@@ -32,7 +32,6 @@ export const firebaseServices = {
             const data = {
                 status: 'completed'
             }
-
             await updateDoc(docRef, data);
         } catch (error) {
             console.error(error)

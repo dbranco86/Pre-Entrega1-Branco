@@ -18,5 +18,12 @@ a{
 ul{
   list-style: none;
 }
+.allcontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh
+}
+
 
 

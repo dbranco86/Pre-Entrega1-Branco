@@ -12,7 +12,7 @@ import './styles.css'
 
 function Cart () {
     const navigate = useNavigate();
-    const {cart, onAddToCart, onRemoveItem, onDecreaseItem, total, getTotalItemQuantity } = useContext(CartContext);
+    const {cart, onAddToCart, onRemoveItem, onDecreaseItem, total} = useContext(CartContext);
 
     const onHandlerCreateCart = async () => {
         const newCart = {

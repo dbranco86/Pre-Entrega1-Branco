@@ -11,13 +11,15 @@ import './App.css'
 
 function App() {  
   return (  
-    <div>
       <CartProvider>
-        <Navbar />  
-        <Router />
-        <Footer />
+        <div className='allcontainer'>
+          <div>
+            <Navbar />  
+            <Router />
+          </div>
+          <Footer />
+        </div>
       </CartProvider>
-    </div>
   )
 }
 
