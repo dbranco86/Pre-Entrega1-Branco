@@ -12,8 +12,6 @@ ul{
 .main-container{
     display: flex;
     flex-direction: column;
-    flex: 1;
-    height: 100%;
 }
 .coversContainer{
     display: flex;
