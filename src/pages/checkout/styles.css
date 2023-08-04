@@ -1,8 +1,7 @@
 .checkoutContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    width: -webkit-fill-available;
     padding: 2rem;
     margin-top: 4rem;
 }
@@ -45,6 +44,8 @@
 }
 .cartCheckoutContainer{
     width: 50%;
+    max-height: 45rem;
+    overflow: auto;
 }
 
 @media(max-width: 768px){
@@ -54,5 +55,10 @@
     }
     .checkoutContainer{
         flex-direction: column;
+    }
+    .cartCheckoutContainer{
+        width: 100%;
+        max-height: none;
+        margin-top: 5rem;
     }
 }

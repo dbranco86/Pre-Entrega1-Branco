@@ -26,6 +26,8 @@
 }
 .cartContainerTitle h3{
     font-size: large;
+    margin-top: 1rem;
+    text-align: center;
 }
 .cartContainerTitle a{
     color: #000;

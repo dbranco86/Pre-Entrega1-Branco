@@ -10,15 +10,15 @@ function CartItem({onAddToCart, onDecreaseItem, onRemoveItem, id, image, name, p
             <div className='cartContentContainer'>
             <p className='cartProductName'>{name}</p>
                 <p className='cartPrice'>USD {price}</p>
-                <p className='cartQuantity'>qty: {quantity}</p>
-                <p className='cartStock'>{stock} left</p>
+                <p className='cartQuantity'>cantidad: {quantity}</p>
+                <p className='cartStock'>quedan {stock}</p>
                 <div className='cartActions'>
                     <div className='buttonContanier'> 
                         <button onClick={() => onAddToCart(id)} className='cartButttonAdd'>+</button>
                         <button onClick={() => onDecreaseItem(id)} className='cartButttonDecrease'>-</button>
                     </div>
                     <div className='containerCartButtonRemove'>
-                        <button onClick={() => onRemoveItem(id)} className='cartButttonRemove'>Remove</button>
+                        <button onClick={() => onRemoveItem(id)} className='cartButttonRemove'>Eliminar</button>
                     </div>
                 </div>
             </div>

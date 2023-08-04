@@ -42,10 +42,15 @@ function Cart () {
                 <h2>Carrito de compra</h2>
             </div>
             <div className='cartContainer'>
-                <div className='cartContainerTitle'>
-                    <h2>Carrito de compras</h2>
-                    {cart.length === 0 && <h3>Su carrito actualmente se encuentra vacio</h3> && <p><Link to="/products">Continúe explorando aquí.</Link></p>}                    
-                </div>
+            <div className='cartContainerTitle'>
+                <h2>Carrito de compras</h2>
+                {cart.length === 0 && (
+                    <>
+                        <h3>Su carrito actualmente se encuentra vacío.</h3>
+                        <p><Link to="/products">Continúe explorando aquí.</Link></p>
+                    </>
+                )}
+            </div>
                 {
                     cart?.length > 0 && cart.map((product) => (
                         <CartItem key={product.id} {...product} onAddToCart={onAddToCart} onDecreaseItem={onDecreaseItem} onRemoveItem={onRemoveItem} />
