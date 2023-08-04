@@ -81,7 +81,7 @@ function ProductList() {
             </div>
             <div className="cardContainer">
                 {search.length > 0 && productFiltered.length === 0 && (
-                    <h2>Product not found</h2>
+                    <h2>Producto no encontrado</h2>
                 )}
                 {productFiltered.map((product) => (
                     <Card

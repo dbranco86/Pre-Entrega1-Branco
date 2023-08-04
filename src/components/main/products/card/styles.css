@@ -29,12 +29,13 @@
 }
 .cardName {
     font-size: 1.2rem;
+    font-weight: bold;
     padding: 0.3rem 0;
-    color: red;
+    color: #000;
 }
 .cardCategory {
     font-size: 0.8rem;
-    color: yellow;
+    color: #000;
     font-weight: bold;
     padding: 0.3rem 0;
 }
@@ -47,7 +48,7 @@
 .cardPrice {
     font-size: 1.1rem;
     font-weight: bold;
-    color: #97d12c;
+    color: #000;
     padding: 0.3rem 0;
 }
 .cardStock {

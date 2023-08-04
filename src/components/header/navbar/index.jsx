@@ -30,7 +30,7 @@ const Navbar = () => {
                 <span className="hamb-line"></span>
             </label>
             <div className="logo" onClick={handleMenuItemClick}>
-                    <Link to="/">
+                    <Link to="/"Link>
                         <img className="image-logo" src="../../logo.png" alt=""/>
                     </Link>
             </div>           

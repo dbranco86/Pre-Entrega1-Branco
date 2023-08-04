@@ -16,7 +16,7 @@ const Details = ({ id, image, name, category, description, price, stock}) => {
                 <p className='cardDetailCategory'>{category}</p>
                 <p className='cardDetailDescription'>{description}</p>
                 <p className='cardDetailPrice'>USD {price}</p>
-                <p className='cardDetailStock'>{stock} left</p>
+                <p className='cardDetailStock'>quedan {stock}</p>
                 <div className='cardDetailActions'>
                 <button onClick={() => onAddToCart(id)} className='cardButton' >Agregar al carrito</button>
             </div>

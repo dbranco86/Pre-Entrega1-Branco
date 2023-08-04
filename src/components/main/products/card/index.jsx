@@ -11,7 +11,7 @@ const Card = ({ id, image, name, category, description, price, stock, onAddToCar
                 <p className='cardCategory'>{category}</p>
                 <p className='cardDescription'>{description}</p>
                 <p className='cardPrice'>USD {price}</p>
-                <p className='cardStock'>{stock} left</p>
+                <p className='cardStock'>quedan {stock}</p>
             </div>
             </button>
             <div className='cardActions'>

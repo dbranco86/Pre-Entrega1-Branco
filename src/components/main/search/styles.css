@@ -57,7 +57,7 @@
 .inputContainer{
     display: flex;
     flex-direction: row;
-    margin-right: 100%;
+    margin-right: auto;
     padding-top: 5px;
     margin-top: 85px;
     height: auto;
