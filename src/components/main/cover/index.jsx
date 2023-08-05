@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import './styles.css'
 
-const Cover = () => {
+const Covers = () => {
     
     useEffect(() => {
         const carousel = document.getElementById('carouselExampleRide'); 
         const carouselInstance = new bootstrap.Carousel(carousel, {
-            interval: 5500, 
+            interval: 55000, 
         });
     
         return () => {
@@ -16,7 +16,7 @@ const Cover = () => {
     
     return (
         <section className='carousel'>
-            <div id="carouselExampleRide" className='carousel-container' data-bs-ride="carousel">
+            <div id="carouselExampleRide" className='carousel-container'  data-bs-ride="carousel">
                 <div id="carouselExampleIndicators" class="carousel slide">
                     <div class="carousel-inner carousel-transition">
                         <div class="carousel-item active carousel-transition" data-bs-interval="5500">
@@ -35,4 +35,4 @@ const Cover = () => {
     )
 }
 
-export default Cover;
+export default Covers;

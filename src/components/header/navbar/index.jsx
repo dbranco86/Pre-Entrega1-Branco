@@ -20,6 +20,7 @@ const Navbar = () => {
     }, []);
 
     const handleMenuItemClick = () => {
+        window.scrollTo(0, 0); 
         setIsMenuOpen(false);
     };
 

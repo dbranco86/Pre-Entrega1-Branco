@@ -24,6 +24,7 @@ function ProductList() {
     }, [selectedCategory, search]);
 
     const onShowDetails = (id) => {
+        window.scrollTo(0, 0);
         navigate(`/products/${id}`);
     };
 

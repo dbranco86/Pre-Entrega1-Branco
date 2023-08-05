@@ -32,6 +32,7 @@ function Cart () {
 
     const onHandlerCheckout = async () => {
         const cartId = await onHandlerCreateCart()
+        window.scrollTo(0, 0);
         navigate('/checkout', { state: { cartId: cartId.id } })
     }
 

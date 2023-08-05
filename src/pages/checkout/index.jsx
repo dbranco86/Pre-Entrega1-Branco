@@ -110,6 +110,7 @@ function Checkout () {
         event.preventDefault()
         const { orderId } = await onHandlerOrder();
         clearInputs({ formState })
+        window.scrollTo(0, 0);
         navigate('/success-order', { state: { orderId: orderId.id } })
     }
 
