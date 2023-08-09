@@ -1,7 +1,10 @@
 /* Asegúrate de que Covers ocupe todo el alto de la pantalla */
 .carousel{
   height: 100%;
+  width: 100%;
+  display: flex;
 }
+
 .carousel-container {
   height: 100vh;
   top: 0;
@@ -17,8 +20,11 @@
   height: 100%; 
 }
 
+.carousel-transition{
+  transition: opacity 600ms cubic-bezier(0.25, 1, 0.5, 1) 0s;
+}
+
 .carousel-item {
-  display: flex;
   align-items: center; 
   justify-content: center; 
   height: 100%;
@@ -28,4 +34,30 @@
   object-fit: cover;
   width: 100%;
   height: 100%; 
+}
+
+.carousel-fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.carousel-fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
 }

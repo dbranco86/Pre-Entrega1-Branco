@@ -6,13 +6,27 @@ const Covers = () => {
     useEffect(() => {
         const carousel = document.getElementById('carouselExampleRide'); 
         const carouselInstance = new bootstrap.Carousel(carousel, {
-            interval: 55000, 
+            interval: 5500, 
         });
     
+        carousel.addEventListener('slide.bs.carousel', (event) => {
+            const { from, to } = event;
+            const items = carousel.querySelectorAll('.carousel-item');
+
+            items[to].classList.add('carousel-fade-in');
+            items[from].classList.add('carousel-fade-out');
+
+            items[to].addEventListener('animationend', () => {
+                items[to].classList.remove('carousel-fade-in');
+                items[from].classList.remove('carousel-fade-out');
+            });
+        });
+
         return () => {
             carouselInstance.dispose();
         };
     }, []);
+
     
     return (
         <section className='carousel'>
